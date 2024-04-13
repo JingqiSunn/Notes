@@ -296,6 +296,21 @@
 >
 > We are going to find ways to examine whether the series diverge, but we are going to start with the case when $a_n>0$ always true.
 
+##### Monotone Convergence Theorem
+
+> *Definition:*
+> $$
+> (a_n>0)\and(\lim_{n\rightarrow \infty}(\sum_{i=1}^{n}a_i)\leq L)\vdash\sum_{i=1}^{n}a_i\text{convergence}\\
+> (a_n<0)\and(\lim_{n\rightarrow \infty}(\sum_{i=1}^{n}a_i)\geq L)\vdash\sum_{i=1}^{n}a_i\text{convergence}
+> $$
+> *Proof:*
+>
+> > [!NOTE]
+> >
+> > I will not give the proof of this conclusion here.
+>
+> 
+
 ##### The Integrational Test
 
 > *Definition:*
@@ -306,12 +321,10 @@
 >
 > We will use the convergence or divergence of the partial sum to represent which of the infinite series.
 >
-> And the *Sandwich Rule* will be very important in this proof.
->
 > Set $f(x)$ satisfies: positive, decreasing, $f(n)=a_n$
 > $$
 > \begin{aligned}
-> \sum_{i=N}^{n}a_n=&a_N+a_{N+1}+a_{N+2}+...+a_n\\
+> \sum_{i=N}^{n}a_i=&a_N+a_{N+1}+a_{N+2}+...+a_n\\
 > =&\int_{N}^{N+1}a_Ndx+\int_{N+1}^{N+2}a_{N+1}dx+...+\int_{n}^{n+1}a_ndx\\
 > \geq&\int_{N}^{N+1}f(x)dx+\int_{N+1}^{N+2}f(x)dx+...+\int_{n}^{n+1}f(x)dx\\
 > =&\int_{N}^{n+1}f(x)dx
@@ -320,7 +333,7 @@
 >
 > $$
 > \begin{aligned}
-> \sum_{i=N}^{n}a_n=&a_N+a_{N+1}+a_{N+2}+...+a_n\\
+> \sum_{i=N}^{n}a_i=&a_N+a_{N+1}+a_{N+2}+...+a_n\\
 > =&\int_{N-1}^{N}a_Ndx+\int_{N}^{N+1}a_{N+1}dx+...+\int_{n-1}^{n}a_ndx\\
 > \leq&\int_{N-1}^{N}f(x)dx+\int_{N}^{N+1}f(x)dx+...+\int_{n-1}^{n}f(x)dx\\
 > =&\int_{N-1}^{n}f(x)dx
@@ -329,12 +342,83 @@
 >
 > Now we have
 > $$
-> \int_{N}^{n+1}f(x)dx\leq \sum_{i=N}^{n}a_n\leq \int_{N-1}^{n}f(x)dx
+> \int_{N}^{n+1}f(x)dx\leq \sum_{i=N}^{n}a_i\leq \int_{N-1}^{n}f(x)dx
 > $$
-> when $n\rightarrow \infty$, we will have that $\int_{N}^{n+1}f(x)dx$ and $\int_{N-1}^{n}f(x)dx$​ both converge or diverge, then using the sandwich rule we will find that 
+> If we find $\int_N^{\infty}f(x)dx$ converges, this means that $\sum_{i=N}^{n}a_n$ is increasing and has a specific upper bound, according to the monotone convergence theorem we find that $\sum_{i=N}^{n}a_n$  converges here.
 >
-> $a_n > 0$, $a_n$is decreasing, the series $\sum_{n=N}^{\infty}a_n$ and the integral $\int_N^{\infty}f(x)dx$ both converge or diverge.
+> If we find $\int_N^{\infty}f(x)dx$ diverges, this means that $\sum_{i=N}^{n}a_n$ is bigger than $\infty$​, than it obviously diverges.
 >
-> *Error Estimation:*
+> So we proved
+> $$
+> (a_n>0)\and(\lim_{n\rightarrow \infty}(\sum_{i=1}^{n}a_i)\leq L)\vdash\sum_{i=1}^{n}a_i\text{convergence}\\
+> (a_n<0)\and(\lim_{n\rightarrow \infty}(\sum_{i=1}^{n}a_i)\geq L)\vdash\sum_{i=1}^{n}a_i\text{convergence}
+> $$
+> **Error Estimation:**
 >
->  
+> > [!IMPORTANT]
+> >
+> > I think it is very important for us to know that why we need this error estimation.
+> >
+> > For example I give you an convergent infinite series $\sum_{n=1}^{\infty}\frac{1}{n^2}$, we can not give the precise number that where it converges, but we can use the integrational test to give a rounded value for the series.
+> >
+> > But this will obviously cause some error, so we need to know how much error will it create.
+>
+> From the proof of the integrational test we can find a very important inequality.
+> $$
+> \int_{N}^{n+1}f(x)dx\leq \sum_{i=N}^{n}a_i\leq \int_{N-1}^{n}f(x)dx\\
+> \int_{N}^{\infty}f(x)dx\leq \sum_{i=N}^{\infty}a_i\leq \int_{N-1}^{\infty}f(x)dx
+> $$
+> *Definition:*
+>
+> We use the partial sum to estimate the total sum.
+> $$
+> R_n=S-s_n
+> $$
+>
+> $$
+> \int_{n+1}^{\infty}f(x)dx\leq R_n \leq \int_{n}^{\infty}f(x)dx
+> $$
+>
+> *Proof:*
+> $$
+> \begin{aligned}
+> R_n=&S-s_n\\
+> =&a_{n+1}+a_{n+2}+...\\
+> \geq& \int_{n+1}^\infty f(x)dx
+> \end{aligned}
+> $$
+>
+> $$
+> \begin{aligned}
+> R_n=&S-s_n\\
+> =&a_{n+1}+a_{n+2}+...\\
+> \leq& \int_{n}^\infty f(x)dx
+> \end{aligned}
+> $$
+>
+> 
+
+##### Comparison Test
+
+> *Definition:*
+> $$
+> (a_n,c_n,d_n\geq 0)\and(d_n\leq a_n\leq c_n,n>N)\vdash (\sum d_n\text{divergence}\rightarrow \sum a_n\text{devergence})\\
+> (a_n,c_n,d_n\geq 0)\and(d_n\leq a_n\leq c_n,n>N)\vdash (\sum c_n\text{convergence}\rightarrow \sum  a_n\text{convergence})
+> $$
+> *Proof:*
+>
+> When $\sum d_n$ diverges, we will find that $\sum d_n\rightarrow \infty$, so we find that $\sum a_n>\infty$, so we find that the series $\sum a_n$ obviously diverges.
+>
+> When $\sum c_n$ converges, then we will find that $\sum c_n\rightarrow L$, then we will find that $\sum a_n$ is increasing and also it is bounded, so according to the monotone convergence theorem, we will have the series $\sum a_n$ converges.
+>
+> > [!NOTE]
+> >
+> > You will find that you can only know that whether the series $\sum a_n$ converges, but if it converges you will have little knowledge about the exact limit of it.
+>
+> 
+
+##### Limit Comparison Test
+
+> *Definition:*
+>
+> 
