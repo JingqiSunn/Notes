@@ -499,3 +499,215 @@
 > (a_n,b_n>0,n>N)\and(\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=\infty)\vdash(\sum b_n\text{Divergence}\rightarrow \sum a_n\text{Divergence})
 > $$
 > 
+
+##### Absolute Convergence
+
+> *Definition:*
+> $$
+> (\sum|a_n|\text{Convergence})\leftrightarrow(\sum a_n \text{is convergent absolutely})
+> $$
+>
+> > [!NOTE]
+> >
+> > This will be more useful when it comes to the Tayler Series and the interval of the convergence.
+>
+> 
+
+> [!WARNING]
+>
+> But there is one thing very important. From now on we are not going to purely study the non-negative series, we are going to analyze all the normal $a_n$.
+
+
+
+##### The Ratio Test
+
+> > [!NOTE]
+> >
+> > The central trick in the ratio test is how to compare the series you are working on with a geometric series.
+>
+> **Theorem 13.1**
+>
+> *Definition:*
+> $$
+> (\lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\rho)\and(\rho<1)\vdash (\sum a_n\text{Convergence Absolutely})
+> $$
+> *Proof:*
+>
+> We have $\lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\rho$, so according to the definition of the limitation.
+> $$
+> \forall \epsilon, \exist N,\text{when } n>N,||\frac{a_{n+1}}{a_n}|-\rho|<\epsilon
+> $$
+>
+> $$
+> |\frac{a_{n+1}}{a_n}|-\rho\leq||\frac{a_{n+1}}{a_n}|-\rho|<\epsilon\\
+> |\frac{a_{n+1}}{a_n}|-\rho<\epsilon\\
+> |\frac{a_{n+1}}{a_n}|<\rho+\epsilon\\
+> $$
+>
+> We choose relatively small $\epsilon$, for $n>N$, it can be proved that we can always find the corresponding $N$, and we have $\rho<1$.
+>
+> Then we will find there exist small $\epsilon$ that $r=\rho +\epsilon<1$
+>
+> That is when $n>N$, we have when $r<1$,
+> $$
+> |\frac{a_{n+1}}{a_n}|<r\\
+> \frac{|a_{n+1}|}{|a_n|}<r\\
+> |a_{n+1}|<r\cdot |a_{n}|
+> $$
+> Set $m\in \Z$, and $m\geq 1$.
+> $$
+> |a_{N+m}|<r^{m}\cdot |a_{N}|
+> $$
+>
+> $$
+> \begin{aligned}
+> \sum_{n=1}^{\infty}|a_n|=&\sum_{n=1}^{N-1}|a_n|+\sum_{n=N}^{\infty}|a_n|\\
+> <&\sum_{n=1}^{N-1}|a_n|+|a_N|(1+r+r^2+...+r^n+...)\\
+> \end{aligned}
+> $$
+>
+> And According to our knowledge on geometric series that when $r<1$, we will have $1+r+r^2+...+r^n+...$ to be convergent, then according to the calculating rule for convergence we will find that the series $\sum a_n$​  converges absolutely.
+>
+> So we got 
+> $$
+> (\lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\rho)\and(\rho<1)\vdash (\sum a_n\text{Convergence Absolutely})
+> $$
+> **Theorem 13.2**
+>
+> *Definition:*
+> $$
+> (\lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\rho)\and(\rho>1)\vdash (\sum a_n\text{Divergence})
+> $$
+> *Proof:*
+>
+> We have $\lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\rho$, so according to the definition of the limitation.
+> $$
+> \forall \epsilon, \exist N,\text{when } n>N,||\frac{a_{n+1}}{a_n}|-\rho|<\epsilon
+> $$
+> We choose relatively small $\epsilon$, for $n>N$, it can be proved that we can always find the corresponding $N$, and we have $\rho>1$​.
+> $$
+> ||\frac{a_{n+1}}{a_n}|-\rho|<\epsilon\\
+> \rho-\epsilon<|\frac{a_{n+1}}{a_n}|<\epsilon+\rho
+> $$
+> We have $\rho>1$, so there is a corresponding $\epsilon$ that when $n>N$, we have $r=\rho-\epsilon>1$
+>
+> So when $n>N$, we have $r<|\frac{a_{n+1}}{a_n}|$
+>
+> Then in the same way 
+> $$
+> \begin{aligned}
+> &|a_{n+1}|>r\cdot|a_n|\\
+> &|a_{N+m}|>r^{m}\cdot |a_{N}|\\
+> \end{aligned}
+> $$
+> Then easily we will find a very trivial thing that 
+> $$
+> \lim_{n\rightarrow \infty}a_n\ne 0
+> $$
+> According to The n^th^ Term Test For Divergence, we will find that 
+> $$
+> (\lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\rho)\and(\rho>1)\vdash (\sum a_n\text{Divergence})
+> $$
+> **Theorem 13.3**
+>
+> *Definition:*
+> $$
+> (\lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\rho)\and(\rho=1)\vdash (\sum a_n\text{Inconclusive})
+> $$
+> *Proof:*
+>
+> I think there is no need to prove this.
+
+##### The Root Test
+
+> **Theorem 13.1**
+>
+> *Definition:*
+> $$
+> (\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}=\rho)\and(\rho<1)\vdash (\sum a_n\text{Convergence Absolutely})
+> $$
+> *Proof:*
+>
+> We have the definition of the limitation, so we have
+> $$
+> \forall \epsilon, \exist N,\text{when } n>N,|\sqrt[n]{|a_n|}-\rho|<\epsilon
+> $$
+>
+> $$
+> |\sqrt[n]{|a_n|}-\rho|<\epsilon\\
+> \rho-\epsilon<\sqrt[n]{|a_n|}<\rho+\epsilon\\
+> $$
+>
+> We have that $\rho<1$, so that we have for $n>N$, there will be 
+> $$
+> r=\rho+\epsilon<1
+> $$
+> So that 
+> $$
+> \sqrt[n]{|a_n|}<r\\
+> |a_n|<r^n\\
+> $$
+> We know the characteristic of geometric series and also the comparison rule, 
+>
+> So that we have the series $\sum|a_n|$ converges, so that $\sum {a_n}$ converges absolutely.
+>
+> So we proved that 
+> $$
+> (\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}=\rho)\and(\rho<1)\vdash (\sum a_n\text{Convergence Absolutely})
+> $$
+> **Theorem 13.2**
+>
+> *Definition:*
+> $$
+> (\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}=\rho)\and(\rho>1)\vdash (\sum a_n\text{Divergence})
+> $$
+> *Proof:*
+>
+> We have the definition of the limitation, so we have
+> $$
+> \forall \epsilon, \exist N,\text{when } n>N,|\sqrt[n]{|a_n|}-\rho|<\epsilon
+> $$
+>
+> $$
+> |\sqrt[n]{|a_n|}-\rho|<\epsilon\\
+> \rho-\epsilon<\sqrt[n]{|a_n|}<\rho+\epsilon\\
+> $$
+>
+> We have that $\rho>1$, so that we have for $n>N$, there will be 
+> $$
+> r=\rho-\epsilon>1
+> $$
+> So that 
+> $$
+> \sqrt[n]{|a_n|}>r\\
+> |a_n|>r^n\\
+> $$
+> We know the characteristic of geometric series,
+>
+> We can find that $\lim_{n\rightarrow \infty}a_n\ne0$. 
+>
+> So we proved that 
+> $$
+> (\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}=\rho)\and(\rho<1)\vdash (\sum a_n\text{Divergence})
+> $$
+> 
+
+> [!NOTE]
+>
+> Although we have already mastered several test, but these are all too complexed, but for alternating series, we have an easier way to find whether it is convergent.
+
+##### Alternating Series
+
+> *Definition:*
+> $$
+> a_n=(-1)^{n+1}u_n\text{ or }a_n=(-1)^{n}u_n,\text{ when }u_n=|a_n|\text{ is a positive number.}
+> $$
+> 
+
+##### The Alternating Series Test
+
+> *Definition:*
+> $$
+> (u_n>0)\and(n>N,u_{n+1}\leq u_n)\and(u_n\rightarrow 0)\vdash (\sum_{n=0}^{\infty}u_n\text{Convergence})
+> $$
+> 
