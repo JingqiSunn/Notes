@@ -419,6 +419,83 @@
 
 ##### Limit Comparison Test
 
-> *Definition:*
+> **Theorem 11.1**
 >
+> *Definition:*
+> $$
+> (a_n,b_n>0,n>N)\and(\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=c>0)\vdash(\sum a_n,\sum b_n\text{both converge or diverge})
+> $$
+> *Proof:*
+>
+> > [!NOTE]
+> >
+> > This is just another version of the normal comparison test.
+>
+> We have $\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=c>0$, 
+>
+> Then according to the definition of limitation, we will have 
+>
+> For $\epsilon = \frac{c}{2}>0$, we have a corresponding $N$, when $n>N$, we have $|\frac{a_n}{b_n}-c|<\epsilon=\frac{c}{2}$.
+>
+> So we have when $n>N$, $|\frac{a_n}{b_n}-c|<\frac{c}{2}$.
+> $$
+> \frac{c}{2}<\frac{a_n}{b_n}<\frac{3c}{2}\\
+> \frac{c\cdot b_n}{2}<a_n<\frac{3c\cdot b_n}{2}\\
+> $$
+> This is just in the form of formal comparison test.
+>
+> So we will find that 
+> $$
+> (a_n,b_n>0,n>N)\and(\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=c>0)\vdash(\sum a_n,\sum b_n\text{both converge or diverge})
+> $$
+> **Theorem 11.2**
+>
+> *Definition:*
+> $$
+> (a_n,b_n>0,n>N)\and(\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=0)\vdash(\sum b_n\text{Convergence}\rightarrow \sum a_n\text{Convergence})
+> $$
+>
+> > [!NOTE]
+> >
+> > You can use a similar way to prove it.
+>
+> We have $\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=0$, according to the definition of limitation, we have 
+>
+> For $\epsilon = 1$, we have a corresponding $N$, when $n>N$, we have $|\frac{a_n}{b_n}|<\epsilon=1$.
+>
+> So we have when $n>N$, $|\frac{a_n}{b_n}|<1$​.
+> $$
+> 0<a_n<b_n
+> $$
+> Which is just in the form of comparison test.
+>
+> So we proved that 
+> $$
+> (a_n,b_n>0,n>N)\and(\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=0)\vdash(\sum b_n\text{Convergence}\rightarrow \sum a_n\text{Convergence})
+> $$
+> **Theorem 11.3**
+>
+> *Definition:*
+> $$
+> (a_n,b_n>0,n>N)\and(\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=\infty)\vdash(\sum b_n\text{Divergence}\rightarrow \sum a_n\text{Divergence})
+> $$
+>
+> > [!NOTE]
+> >
+> > This proof is very similar to the former one, the only difference is that you have to use the infinite limitation definition.
+>
+> We have $\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=\infty$, according to the definition of limitation, we have 
+>
+> For $\epsilon = 1$, we have a corresponding $N$, when $n>N$, we have $|\frac{a_n}{b_n}|>\epsilon=1$.
+>
+> So we have when $n>N$, $|\frac{a_n}{b_n}|>1$​.
+> $$
+> b_n<a_n
+> $$
+> Which is just in the form of comparison test.
+>
+> So we proved that 
+> $$
+> (a_n,b_n>0,n>N)\and(\lim_{n\rightarrow \infty}\frac{a_n}{b_n}=\infty)\vdash(\sum b_n\text{Divergence}\rightarrow \sum a_n\text{Divergence})
+> $$
 > 
