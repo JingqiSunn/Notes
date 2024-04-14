@@ -1,4 +1,4 @@
-#### Sequence & Convergence & Tayler Series
+#### Sequence & Convergence & Series&Tayler Series
 
 ##### Sequence
 
@@ -710,4 +710,191 @@
 > $$
 > (u_n>0)\and(n>N,u_{n+1}\leq u_n)\and(u_n\rightarrow 0)\vdash (\sum_{n=0}^{\infty}u_n\text{Convergence})
 > $$
+> *Proof:*
+>
+> > [!TIP]
+> >
+> > We know that the best way to prove this thing is to use the Monotone Convergence Theorem.
+>
+> There is no big difference whether the total number of the partial sum is odd or even, so I will suppose they will be even firstly.
+> $$
+> n=2m\\
+> s_{2m}=\sum_{i=1}^{m}(u_{2i-1}-u_{2i})
+> $$
+> So now we know that the partial sum sequence is non-decreasing.
+> $$
+> s_{2m}=u_1+\sum_{i=1}^{m-1}(-u_{2i}+u_{2i+1})-u_{2m}\\
+> $$
+> So That we now know that there is an upper limit for the partial sum sequence, which is $u_1$.
+>
+> Then according to the Monotone Convergence Theorem, we can say that $\sum u_n$ converges.
+>
+> So we proved that 
+> $$
+> (u_n>0)\and(n>N,u_{n+1}\leq u_n)\and(u_n\rightarrow 0)\vdash (\sum_{n=0}^{\infty}u_n\text{Convergence})
+> $$
+> **The Alternating Series Estimation Theorem**
+>
+> > [!IMPORTANT]
+> >
+> > I think the conclusion is very trivial, and we will not prove it here.
+>
 > 
+
+##### Power Series
+
+> *Definition:*
+> $$
+> \sum_{n=0}^{\infty}c_n(x-a)^n
+> $$
+> 
+
+> [!NOTE]
+>
+> We can say that everything in finding the convergence is the same as all the things that has been proved before, and here is just a short cut for application.
+
+##### The Convergence Theorem for Power Series
+
+> **Theorem 18.1**
+>
+> *Definition:*
+>
+> The power series is $\sum_{n=0}^{\infty}a_n(x-a)^n$, if it converge at $x=c\ne 0$, then it will converge absolutely for all $x$ with $|x-a|<|c-a|$.
+>
+> *Proof:*
+>
+> > [!TIP]
+> >
+> > There is a very tricky point in this point that is to change the thing that you want to prove into a problem of the geometric series.
+>
+> We have $\sum_{n=0}^{\infty}a_n(x-a)^n$ converges at $x=c\ne 0$​.
+>
+> We have theorem 7, so that we find that when the number $n$ is big enough then every term is going to be 0.
+>
+> Then we can say that according to the definition of the limitation,
+> $$
+> \forall \epsilon,\exist N>0, \text{ when }n>N,|a_n(c-a)^n|<\epsilon
+> $$
+> We can say that $\epsilon = 1$,
+>
+> So we have $\text{ when }n>N,|a_n(c-a)^n|<1$
+> $$
+> n>N,|a_n|<\frac{1}{|(c-a)^n|}
+> $$
+> When $n>N$, $|x-a|<|c-a|$​, we will have 
+> $$
+> r=\frac{|x-a|}{|c-a|}<1
+> $$
+> 
+> $$
+> \begin{aligned}
+> n>N,&\sum |a_n(x-a)^n|\\
+> <&\sum |\frac{1}{|(c-a)^n|}(x-a)^n|\\
+> =&\sum r^n
+> \end{aligned}
+> $$
+> According to our knowledge in the geometric series we have that the series $\sum |a_n(x-a)^n|$ converges, which means we proved that 
+>
+> The power series is $\sum_{n=0}^{\infty}a_n(x-a)^n$, if it converge at $x=c\ne 0$, then it will converge absolutely for all $x$ with $|x-a|<|c-a|$​.
+>
+> **Theorem 18.2**
+>
+> *Definition:*
+>
+> The power series is $\sum_{n=0}^{\infty}a_n(x-a)^n$, if it diverge at $x=d$, then it will deverge for all $x$ with $|x-a|>|d-a|$​.
+>
+> *Proof:*
+>
+> > [!TIP]
+> >
+> > We don't need to make proof here, because this theorem can be proved by the Theorem 18.1.
+>
+> You can think that if you have a number $e$ that $|e-a|>|d-a|$, but when $x=e$, we have the series converges.
+>
+> Then according to the Theorem 18.1 we have that when $x=d$, the series should also be converge, even converges absolutely.
+>
+> So that cause the contradiction, then according to the method of *Reductio ad Absurdum*, we can prove that
+>
+> The power series is $\sum_{n=0}^{\infty}a_n(x-a)^n$, if it diverge at $x=d$, then it will deverge for all $x$ with $|x-a|>|d-a|$.
+
+##### The Multiplication of Series 
+
+> *Definition:*
+> $$
+> (\sum_{n=0}^{\infty} a_nx^n)(\sum_{n=0}^{\infty} b_nx^n)=\sum_{n=0}^{\infty} c_nx^n=\sum_{n=0}^{\infty} (\sum_{k=0}^{n}a_kb_{n-k})x^n
+> $$
+>
+> > [!IMPORTANT]
+> >
+> > What we can find is that if we know the two original series is convergent then we will have the multiplication of them is convergent.
+>
+> 
+
+> [!IMPORTANT]
+>
+> I will not introduce the term by term Differentiation Theorem because it is too trivial, I will directly use it when it comes to the Tayler Series.
+
+##### Tayler Series
+
+> *Definition:*
+> $$
+> \sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}\cdot(x-a)^k
+> $$
+> *Proof:*
+>
+> We can suppose that any function can be estimated by infinite series, but we will not prove it here, because it is too hard, I will do it directly.
+> $$
+> f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n\\
+> f'(x)=\sum_{n=1}^{\infty}nc_n(x-a)^{n-1}\\
+> f^{(2)}(x)=\sum_{n=2}^{\infty}n\cdot(n+1) c_n(x-a)^{n-2}\\
+> f^{(k)}(x)=\sum_{n=k}^{\infty}\frac{n!}{(n-k)!} c_n(x-a)^{n-k}\\
+> $$
+> Then we will find that 
+> $$
+> f^{(k)}(a)= k!\cdot c_k\\
+> $$
+>
+> $$
+> c_k=\frac{f^{(k)}(a)}{k!}
+> $$
+>
+> $$
+> f(x)=\sum_{n=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^n\\
+> $$
+>
+> > [!NOTE]
+> >
+> > This is the very basic way of finding a Tayler Series.
+>
+> 
+
+##### Tayler's Theorem 
+
+> *Definition:*
+>
+> If $f^{(n)}x$ is differentiable in the interval $(a,b)$ or $(b,a)$, then there will must be $c$ between $a$ and $b$ that $f(b)=\sum_{k=0}^{n}f^{(k)}(a)(b-a)^k+\frac{f^{(n+1)}c}{(n+1)!}(b-a)^{n+1}$​ 
+>
+> *Proof:*
+>
+> I will not give you the proof here.
+>
+> **Tayler Formula**
+> $$
+> R_n(x)=\frac{f^{(n+1)}c}{(n+1)!}(b-a)^{n+1}
+> $$
+>
+> > [!NOTE]
+> >
+> > We have to check the error then we can see the convergence of the function.
+>
+> 
+
+##### The Binomial Series
+
+> *Definition:*
+> $$
+> (1+x)^m=1+\sum_{k=1}^{\infty}(_k^m)x^k
+> $$
+> *Proof:*
+>
+> I think it can be proved by the basic step of the Tayler Series.
