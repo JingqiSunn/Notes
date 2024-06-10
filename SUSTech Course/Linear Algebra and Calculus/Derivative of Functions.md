@@ -39,3 +39,6 @@
 > =&\frac{\part f}{\part x}\cdot \frac{dx}{dt}+\frac{\part f}{\part y}\cdot \frac{dy}{dt}
 > \end{aligned}
 > $$
+
+
+
