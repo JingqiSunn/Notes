@@ -72,9 +72,102 @@ $$
 \end{aligned}
 $$
 
+**Visualization**
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is near 0
+
+<img src="T:\Notes\Photo\2.jpg" alt="2" style="zoom:25%;" />
+
+> [!NOTE]
+>
+> You can notice that the value of the Gamma Function has a huge jump around an integer 0
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is near 1
+
+<img src="T:\Notes\Photo\1.jpg" alt="1" style="zoom:25%;" />
+
+> [!NOTE]
+>
+> You can notice that the value of the Gamma Function at $\alpha = 1$ and $2$​ are very similar, actually they are the same
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is near 2
+
+<img src="T:\Notes\Photo\3.jpg" alt="3" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is near 3
+
+<img src="T:\Notes\Photo\4.jpg" alt="4" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is near 4
+
+<img src="T:\Notes\Photo\5.jpg" alt="5" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$​ is near 5
+
+<img src="T:\Notes\Photo\6.jpg" alt="6" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$​ is near 6
+
+<img src="T:\Notes\Photo\7.jpg" alt="7" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$​ is near 7
+
+<img src="T:\Notes\Photo\8.jpg" alt="8" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is near 8
+
+<img src="T:\Notes\Photo\9.jpg" alt="9" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is near 9
+
+<img src="T:\Notes\Photo\10.jpg" alt="10" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$​ is near 10
+
+<img src="T:\Notes\Photo\11.jpg" alt="11" style="zoom:25%;" />
+
+> $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha -1}e^{-x}dx$, when $\alpha$ is in the interval of $(0,\infty)$
+
+<img src="T:\Notes\Photo\12.jpg" alt="12" style="zoom:22%;" />
+
+> [!NOTE]
+>
+> You can notice that the graph of the Gamma Function concaves up, which lead us to the derivative of the Gamma Function.
+
+$$
+\begin{aligned}
+\frac{d}{d\alpha}\Gamma(\alpha)
+=&\frac{d}{d\alpha}\int_0^{\infty}x^{\alpha -1}e^{-x}dx\\
+=&\int_0^{\infty}\frac{d}{d\alpha}x^{\alpha -1}e^{-x}dx\\
+=&\int_0^{\infty}(\alpha-1)x^{\alpha -2}\cdot \ln x \cdot e^{-x}dx\\
+=&(\alpha-1)\int_0^{\infty}x^{\alpha -2}\cdot \ln x \cdot e^{-x}dx\\
+=&(\alpha-1)\int_0^{\infty}(\ln x) \cdot (x^{\alpha -2}\cdot e^{-x}dx)\\
+=&(\alpha-1)[\ln x\cdot \int x^{\alpha -2}\cdot e^{-x}dx\Bigg|_0^{\infty}- \int_0^{\infty}x^{\alpha -2}\cdot e^{-x}dx\frac{1}{x}]\\
+=&(\alpha -1)\cdot \Gamma(\alpha - 1)-\int_0^{\infty}x^{\alpha -3}\cdot e^{-x}dx\\
+=&(\alpha -1)\cdot \Gamma(\alpha - 1)-\Gamma(\alpha - 2)\\
+=&
+
+
+\end{aligned}
+$$
+
+
+
 ###### Other Resources
 
 https://www.youtube.com/watch?v=c7_F4P71E2E&amp;ab_channel=PhysicsandMathLectures
 
 https://www.youtube.com/watch?v=nZUuHN21zH4&amp;t=29s&amp;ab_channel=BriTheMathGuy
+
+https://en.wikipedia.org/wiki/Gamma_function
+
+
+
+
+
+
+
+
+
+
 

@@ -11,7 +11,7 @@ Here comes an example first.
 >         System.out.printf("%-20d%-20.4f%-20.4f\n", 2, 2 * pi * 2, pi * 2 * 2);
 >         System.out.printf("%-20d%-20.4f%-20.4f\n", 3, 2 * pi * 3, pi * 3 * 3);
 >         System.out.printf("%-20d%-20.4f%-20.4f\n", 4, 2 * pi * 4, pi * 4 * 4);
->     }
+>    	}
 > }
 > ```
 >
@@ -67,9 +67,33 @@ Used to restrict the output depending on the conversion. It specifies the number
 **Example**
 
 > ```java
+> public class PrintFormat {
+>     public static void main(String[] args) {
+>         int testInteger = 123456789;
+>         float testFloat = 1.245990878f;
+>         String testString = "JingqiSUN";
+>         System.out.printf("%d\n",testInteger);
+>         System.out.printf("%20d\n",testInteger);
+>         System.out.printf("%-20d\n",testInteger);
+>         System.out.printf("%+d\n",testInteger);
+>         System.out.printf("%+20d\n",testInteger);
+>         System.out.printf("%,d\n",testInteger);
+>         System.out.printf("%,20d\n",testInteger);
+>         System.out.printf("%,020d\n",testInteger);
+>         System.out.printf("%,+020d\n",testInteger);
+>         System.out.printf("%,+-20d\n",testInteger);
+>         System.out.printf("%,-+20d\n",testInteger);
+>         System.out.printf("%f\n",testFloat);
+>         System.out.printf("%.7f\n",testFloat);
+>         System.out.printf("%+-20.7f\n",testFloat);
+>         System.out.printf("%+020.7f\n",testFloat);
+>         System.out.printf("%s\n",testString);
+>         System.out.printf("%S\n",testString);
+>     }
+> }
 > ```
 >
-> 
+> <img src="C:\Users\孙璟琦\AppData\Roaming\Typora\typora-user-images\image-20240616141112306.png" alt="image-20240616141112306" style="zoom:40%;" />
 
 **Other Resources**
 
